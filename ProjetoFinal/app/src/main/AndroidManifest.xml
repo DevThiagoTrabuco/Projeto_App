@@ -13,10 +13,10 @@
         android:theme="@style/Theme.ProjetoFinal"
         tools:targetApi="31">
         <activity
-            android:name=".MenuPrincipal"
+            android:name=".MenuPrincipalFuncionario"
             android:exported="false" />
         <activity
-            android:name=".CadastroSegundaParte"
+            android:name=".EditarPaciente"
             android:exported="false" />
         <activity
             android:name=".Cadastro"
