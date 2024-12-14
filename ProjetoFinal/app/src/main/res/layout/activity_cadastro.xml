@@ -160,7 +160,7 @@
         android:gravity="center"
         android:text="Cadastrar"
         android:textColor="@color/white"
-        android:textSize="20"
+        android:textSize="20dp"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
