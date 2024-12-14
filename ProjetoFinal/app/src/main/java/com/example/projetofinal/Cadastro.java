@@ -26,4 +26,7 @@ public class Cadastro extends AppCompatActivity {
     public void Cadastrar_paciente(View view) {
 
     }
+
+    public void VoltarAoMenuPrincipal(View view) {
+    }
 }
