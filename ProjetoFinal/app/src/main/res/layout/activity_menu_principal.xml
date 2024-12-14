@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Perfil"
+    android:id="@+id/main"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf=""
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="300dp"
+            android:src="@drawable/quiticon"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu Principal"
+            android:textColor="@color/ciano"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="100dp"
+            />
+        <ImageView
+            android:id="@+id/imageCadastro"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/register"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf=""
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="100dp"
+            />
+        <TextView
+            android:id="@+id/telaCadastro"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="300dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/imageCadastro"
+            app:layout_constraintStart_toStartOf="@id/imageCadastro"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/botao"
+            android:gravity="center"
+            android:text="Cadastro de paciente"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:onClick="TelaCadastro"
+            />
+        <ImageView
+            android:id="@+id/imageEditar"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf=""
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="100dp"
+            />
+        <TextView
+            android:id="@+id/telaEditar"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="300dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/imageEditar"
+            app:layout_constraintStart_toStartOf="@id/imageEditar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/botao"
+            android:gravity="center"
+            android:text="Editar dados de paciente"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:onClick="TelaEditar"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -4,12 +4,15 @@
 
     <size
         android:width="100dp"
-        android:height="100dp"/>
+        android:height="100dp"
+        />
     <solid
-        android:color="@color/white"/>
+        android:color="@color/white"
+        />
     <stroke
         android:color="@color/ciano"
         android:width="1dp"
+
         />
 
 </shape>
