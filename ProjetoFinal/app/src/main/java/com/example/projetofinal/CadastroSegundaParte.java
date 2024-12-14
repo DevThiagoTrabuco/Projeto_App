@@ -9,13 +9,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Cadastro extends AppCompatActivity {
+public class CadastroSegundaParte extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_cadastro);
+        setContentView(R.layout.activity_cadastro_segunda_parte);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -23,7 +23,6 @@ public class Cadastro extends AppCompatActivity {
         });
     }
 
-    public void Cadastrar_paciente(View view) {
-
+    public void Atualizar_dados(View view) {
     }
 }
