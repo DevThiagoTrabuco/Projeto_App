@@ -25,4 +25,7 @@ public class CadastroSegundaParte extends AppCompatActivity {
 
     public void Atualizar_dados(View view) {
     }
+
+    public void VoltarAoMenuPrincipal(View view) {
+    }
 }
