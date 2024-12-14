@@ -25,7 +25,6 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textStyle="bold"
         android:text="Paciente Assitido"
-
         />
 
 

@@ -5,6 +5,162 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".Cadastro">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="550dp"
+        android:textColor="@color/ciano"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="Dados do paciente"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/nome_paciente"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/caixa2"
+        android:padding="7dp"
+        android:layout_marginBottom="450dp"
+        android:hint="Digite o nome do paciente"
+        />
+    <EditText
+        android:id="@+id/cpf_paciente"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/caixa2"
+        android:padding="7dp"
+        android:layout_marginBottom="350dp"
+        android:hint="Digite o cpf do paciente"
+        />
+    <EditText
+        android:id="@+id/dt_nascimento_paciente"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/caixa2"
+        android:padding="7dp"
+        android:layout_marginBottom="240dp"
+        android:hint="Digite a data de nascimento do paciente"
+        />
+    <EditText
+        android:id="@+id/email_paciente"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/caixa2"
+        android:padding="7dp"
+        android:layout_marginBottom="130dp"
+        android:hint="Digite o e-mail do paciente"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:textColor="@color/ciano"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="Dados do responsável"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="__________________________________________________"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/caixa2"
+        android:padding="7dp"
+        android:layout_marginTop="100dp"
+        android:hint="Digite o nome do responsável"
+        />
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/caixa2"
+        android:padding="7dp"
+        android:layout_marginTop="200dp"
+        android:hint="Digite o cpf do responsável"
+        />
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/caixa2"
+        android:padding="7dp"
+        android:layout_marginTop="320dp"
+        android:hint="Digite a data de nascimento do responsável"
+        />
+    <EditText
+        android:id=""
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/caixa2"
+        android:padding="7dp"
+        android:layout_marginTop="440dp"
+        android:hint="Digite o e-mail para contato"
+        />
+    <TextView
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="600dp"
+        android:background="@drawable/botao"
+        android:gravity="center"
+        android:text="Cadastrar"
+        android:textColor="@color/white"
+        android:textSize="20"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
