@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_home"
+            android:icon="@drawable/home"
+            android:title="Dashboard"/>
+
+        <item
+            android:id="@+id/menu_register"
+            android:icon="@drawable/add"
+            android:title="Cadastrar paciente"/>
+
+        <item
+            android:id="@+id/menu_archive"
+            android:icon="@drawable/list"
+            android:title="Arquivo"/>
+
+        <item
+            android:id="@+id/menu_finance"
+            android:icon="@drawable/finance"
+            android:title="Financeiro"/>
+        
+    </group>
+
+    <item
+        android:title="">
+        <menu>
+            <item
+                android:id="@+id/menu_settings"
+                android:icon="@drawable/settings"
+                android:title="Configurações" />
+            <item
+                android:id="@+id/menu_logout"
+                android:icon="@drawable/logout"
+                android:title="Sair"/>
+        </menu>
+    </item>
+</menu>
