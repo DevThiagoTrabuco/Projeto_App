@@ -1,6 +1,7 @@
 package com.example.projetofinal;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +21,14 @@ public class MenuPrincipalFuncionario extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void TelaEditar(View view) {
+    }
+
+    public void TelaCadastro(View view) {
+    }
+
+    public void sair(View view) {
     }
 }

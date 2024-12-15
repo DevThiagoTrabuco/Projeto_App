@@ -23,7 +23,7 @@ public class EditarPaciente extends AppCompatActivity {
         });
     }
 
-    public void Atualizar_dados(View view) {
+    public void AtualizarDados(View view) {
     }
 
     public void VoltarAoMenuPrincipal(View view) {
