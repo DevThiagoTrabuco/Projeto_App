@@ -31,4 +31,7 @@ public class MenuPrincipalFuncionario extends AppCompatActivity {
 
     public void sair(View view) {
     }
+
+    public void pesquisar(View view) {
+    }
 }

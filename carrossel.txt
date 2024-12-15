@@ -1,0 +1,42 @@
+import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.widget.HorizontalScrollView
+import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var carrosselScrollView: HorizontalScrollView
+    private lateinit var carrosselContainer: LinearLayout
+    private val handler = Handler(Looper.getMainLooper())
+    private var currentSlide = 0
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        carrosselScrollView = findViewById(R.id.carrosselScrollView)
+        carrosselContainer = findViewById(R.id.carrosselContainer)
+
+        // Inicia o auto-scroll
+        startAutoScroll()
+    }
+
+    private fun startAutoScroll() {
+        val slideCount = carrosselContainer.childCount
+        handler.postDelayed(object : Runnable {
+            override fun run() {
+                currentSlide = (currentSlide + 1) % slideCount
+                val targetScrollX = currentSlide * carrosselScrollView.width
+                carrosselScrollView.smoothScrollTo(targetScrollX, 0)
+                handler.postDelayed(this, 3000) // Troca a cada 3 segundos
+            }
+        }, 3000)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        handler.removeCallbacksAndMessages(null) // Limpa o handler
+    }
+}
