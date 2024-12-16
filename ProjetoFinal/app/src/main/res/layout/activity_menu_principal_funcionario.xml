@@ -15,14 +15,14 @@
         <!-- Quit Icon no topo direito -->
         <ImageView
             android:id="@+id/sair2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:src="@drawable/quiticon"
             android:onClick="sair"
             android:contentDescription="Sair"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="16dp" />
+             />
 
         <!-- Logo fora da NestedScrollView -->
         <ImageView
@@ -380,22 +380,24 @@
                         android:orientation="vertical"
                         android:layout_marginEnd="16dp"
                         android:gravity="center_horizontal">
+
                         <ImageView
                             android:id="@+id/imageFinanceiro"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/financeiro"
                             android:background="@drawable/circle2"
+                            android:contentDescription="Visão geral financeiro"
                             android:onClick="telaFinanceiro"
-                            android:contentDescription="Visão geral financeiro" />
+                            android:src="@drawable/financeiro" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Visão geral\ndo financeiro"
-                            android:textSize="16sp"
                             android:gravity="center"
-                            android:textColor="#000000" />
+                            android:text="Visão geral\ndo financeiro"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
                     </LinearLayout>
                 </LinearLayout>
             </HorizontalScrollView>
