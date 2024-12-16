@@ -23,15 +23,30 @@ public class MenuPrincipalFuncionario extends AppCompatActivity {
         });
     }
 
-    public void TelaEditar(View view) {
+    public void telaEditar(View view) {
     }
 
-    public void TelaCadastro(View view) {
+    public void telaCadastro(View view) {
     }
 
     public void sair(View view) {
     }
 
     public void pesquisar(View view) {
+    }
+
+    public void telaEstoque(View view) {
+    }
+
+    public void telaCuidadores(View view) {
+    }
+
+    public void telaDebitos(View view) {
+    }
+
+    public void telaContrato(View view) {
+    }
+
+    public void telaFinanceiro(View view) {
     }
 }

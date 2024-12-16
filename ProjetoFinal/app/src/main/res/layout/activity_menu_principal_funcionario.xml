@@ -166,6 +166,7 @@
                             android:layout_height="100dp"
                             android:src="@drawable/register"
                             android:background="@drawable/circle2"
+                            android:onClick="telaCadastro"
                             android:contentDescription="Cadastrar Paciente" />
                         <TextView
                             android:layout_width="wrap_content"
@@ -188,7 +189,7 @@
                             android:layout_height="100dp"
                             android:src="@drawable/edit"
                             android:background="@drawable/circle2"
-                            android:onClick="TelaEditar"
+                            android:onClick="telaEditar"
                             android:contentDescription="Editar Dados" />
                         <TextView
                             android:layout_width="wrap_content"
@@ -211,7 +212,7 @@
                             android:layout_height="100dp"
                             android:src="@drawable/profile2"
                             android:background="@drawable/circle2"
-                            android:onClick="TelaEditar"
+                            android:onClick="telaEditar"
                             android:contentDescription="Visão geral" />
                         <TextView
                             android:layout_width="wrap_content"
@@ -258,18 +259,18 @@
                         android:layout_marginEnd="16dp"
                         android:gravity="center_horizontal">
                         <ImageView
-                            android:id="@+id/imageVisaoGeral"
+                            android:id="@+id/imageEstoque"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/profile2"
+                            android:src="@drawable/estoque"
                             android:background="@drawable/circle2"
-                            android:onClick="TelaEditar"
-                            android:contentDescription="Visão geral" />
+                            android:onClick="telaEstoque"
+                            android:contentDescription="Estoque" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Visão geral\nde pacientes"
+                            android:text="Estoque"
                             android:textSize="16sp"
                             android:gravity="center"
                             android:textColor="#000000" />
@@ -281,18 +282,18 @@
                         android:layout_marginEnd="16dp"
                         android:gravity="center_horizontal">
                         <ImageView
-                            android:id="@+id/imageVisaoGeral"
+                            android:id="@+id/imageCuidadores"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/profile2"
+                            android:src="@drawable/cuidadores"
                             android:background="@drawable/circle2"
-                            android:onClick="TelaEditar"
-                            android:contentDescription="Visão geral" />
+                            android:onClick="telaCuidadores"
+                            android:contentDescription="Cuidadores" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Visão geral\nde pacientes"
+                            android:text="Visao geral de\n cuidadores"
                             android:textSize="16sp"
                             android:gravity="center"
                             android:textColor="#000000" />
@@ -303,22 +304,7 @@
                         android:orientation="vertical"
                         android:layout_marginEnd="16dp"
                         android:gravity="center_horizontal">
-                        <ImageView
-                            android:id="@+id/imageVisaoGeral"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/profile2"
-                            android:background="@drawable/circle2"
-                            android:onClick="TelaEditar"
-                            android:contentDescription="Visão geral" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Visão geral\nde pacientes"
-                            android:textSize="16sp"
-                            android:gravity="center"
-                            android:textColor="#000000" />
+
                     </LinearLayout>
                 </LinearLayout>
             </HorizontalScrollView>
@@ -349,17 +335,18 @@
                         android:layout_marginEnd="16dp"
                         android:gravity="center_horizontal">
                         <ImageView
-                            android:id="@+id/imageCadastro"
+                            android:id="@+id/imageDebitos"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/register"
+                            android:src="@drawable/debitos"
                             android:background="@drawable/circle2"
-                            android:contentDescription="Cadastrar Paciente" />
+                            android:onClick="telaDebitos"
+                            android:contentDescription="Visao geral debitos" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Cadastrar\npaciente"
+                            android:text="Debitos e\nacordos"
                             android:textSize="16sp"
                             android:gravity="center"
                             android:textColor="#000000" />
@@ -371,18 +358,18 @@
                         android:layout_marginEnd="16dp"
                         android:gravity="center_horizontal">
                         <ImageView
-                            android:id="@+id/imageEditar"
+                            android:id="@+id/imageContratos"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/edit"
+                            android:src="@drawable/contratos"
                             android:background="@drawable/circle2"
-                            android:onClick="TelaEditar"
-                            android:contentDescription="Editar Dados" />
+                            android:onClick="telaContrato"
+                            android:contentDescription="Contratos ativos" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Editar dados\n do paciente"
+                            android:text="Contratos\nativos"
                             android:textSize="16sp"
                             android:gravity="center"
                             android:textColor="#000000" />
@@ -394,18 +381,18 @@
                         android:layout_marginEnd="16dp"
                         android:gravity="center_horizontal">
                         <ImageView
-                            android:id="@+id/imageVisaoGeral"
+                            android:id="@+id/imageFinanceiro"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/profile2"
+                            android:src="@drawable/financeiro"
                             android:background="@drawable/circle2"
-                            android:onClick="TelaEditar"
-                            android:contentDescription="Visão geral" />
+                            android:onClick="telaFinanceiro"
+                            android:contentDescription="Visão geral financeiro" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Visão geral\nde pacientes"
+                            android:text="Visão geral\ndo financeiro"
                             android:textSize="16sp"
                             android:gravity="center"
                             android:textColor="#000000" />
