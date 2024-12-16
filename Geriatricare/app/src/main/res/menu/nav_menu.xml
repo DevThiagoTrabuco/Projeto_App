@@ -26,7 +26,11 @@
             android:id="@+id/menu_finance"
             android:icon="@drawable/finance"
             android:title="Financeiro"/>
-        
+
+        <item
+            android:id="@+id/menu_stock"
+            android:icon="@drawable/stock"
+            android:title="Estoque"/>
     </group>
 
     <item

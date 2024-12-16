@@ -79,6 +79,9 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
             case R.id.menu_finance:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new finance()).commit();
                 break;
+            case R.id.menu_stock:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new stock()).commit();
+                break;
             case R.id.menu_settings:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new settings()).commit();
                 break;

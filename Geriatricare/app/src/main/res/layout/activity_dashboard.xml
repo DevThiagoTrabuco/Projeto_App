@@ -15,13 +15,20 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="      "/>
+
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:id="@+id/toolbar"
             android:background="@color/ligth_cyan"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:tooltipText=""
+            app:titleTextColor="@color/ligth_cyan"
+            app:subtitleTextColor="@color/ligth_cyan"
             />
 
         <FrameLayout
