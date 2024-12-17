@@ -1,6 +1,7 @@
 package com.example.geriatricare;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -18,6 +19,9 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.Objects;
 
 public class dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -36,6 +40,7 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Objects.requireNonNull(getSupportActionBar()).setTitle("");
 
         drawerLayout = findViewById(R.id.dashboard);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -47,7 +52,8 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
         toggle.syncState();
 
         if(savedInstanceState == null){
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new home()).commit();
+            Intent i = new Intent(getApplicationContext(), dashboard.class);
+            startActivity(i);
             navigationView.setCheckedItem(R.id.menu_home);
         }
 
@@ -66,27 +72,37 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Intent i;
         switch (item.getItemId()) {
             case R.id.menu_home:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new home()).commit();
+                i = new Intent(getApplicationContext(), dashboard.class);
+                startActivity(i);
                 break;
             case R.id.menu_register:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new register()).commit();
+                i = new Intent(getApplicationContext(), register.class);
+                startActivity(i);
                 break;
             case R.id.menu_archive:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new archive()).commit();
+                i = new Intent(getApplicationContext(), archive.class);
+                startActivity(i);
                 break;
             case R.id.menu_finance:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new finance()).commit();
+                i = new Intent(getApplicationContext(), finance.class);
+                startActivity(i);
                 break;
             case R.id.menu_stock:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new stock()).commit();
+                i = new Intent(getApplicationContext(), stock.class);
+                startActivity(i);
                 break;
             case R.id.menu_settings:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new settings()).commit();
+                i = new Intent(getApplicationContext(), settings.class);
+                startActivity(i);
                 break;
             case R.id.menu_logout:
-                Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show();
+                FirebaseAuth.getInstance().signOut();
+                i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
+                finish();
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);

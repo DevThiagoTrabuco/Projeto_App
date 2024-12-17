@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="dark_cyan">#FF05363C</color>
     <color name="ligth_cyan">#FF06C6F6</color>
+    <color name="teal">#085E76</color>
 </resources>

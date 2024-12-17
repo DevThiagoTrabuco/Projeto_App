@@ -38,7 +38,7 @@
             />
 
         <EditText
-            android:id="@+id/mail"
+            android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -57,7 +57,7 @@
             />
 
         <EditText
-            android:id="@+id/senha"
+            android:id="@+id/pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -74,6 +74,7 @@
             />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -89,7 +90,18 @@
             android:textStyle="bold"
             android:textAllCaps="false"
             android:text="Entrar"
-            android:onClick="entrar"
+            android:onClick="logIn"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible"
             />
 
         <TextView

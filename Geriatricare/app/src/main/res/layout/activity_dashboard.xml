@@ -18,34 +18,30 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:text="      "/>
+            android:text=""/>
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:id="@+id/toolbar"
-            android:background="@color/ligth_cyan"
+            android:background="@color/teal"
             android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:tooltipText=""
-            app:titleTextColor="@color/ligth_cyan"
-            app:subtitleTextColor="@color/ligth_cyan"
             />
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/fragmentContainer"
-            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/botao" />
 
     </LinearLayout>
 
-    <com.google.android.material.navigation.NavigationView
+    <!-- <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/nav_view"
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_menu"
-        app:itemIconTint="@color/ligth_cyan"/>
+        app:itemIconTint="@color/teal"/> -->
 
 </androidx.drawerlayout.widget.DrawerLayout>

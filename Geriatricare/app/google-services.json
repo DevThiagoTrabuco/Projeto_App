@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "713890091713",
+    "project_id": "geriatricare-32dd0",
+    "storage_bucket": "geriatricare-32dd0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713890091713:android:8b2ea0c7462a12a371fa40",
+        "android_client_info": {
+          "package_name": "com.example.geriatricare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVVYCCqnQt6jnw5eiwD7x6JJBbPvjklGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
