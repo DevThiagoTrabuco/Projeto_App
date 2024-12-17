@@ -13,17 +13,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="125dp"
+        android:layout_gravity="center"
         >
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginBottom="500dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/geriatricare"/>
 
         <View
             android:layout_width="match_parent"
@@ -35,8 +26,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Recuperação de senha"
+            android:textStyle="bold"
+            android:textSize="10pt"
+            android:layout_marginBottom="225dp"
+            />
+
         <EditText
-            android:id="@+id/login"
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -46,30 +50,14 @@
             android:background="@drawable/caixa"
             android:padding="20dp"
             android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="120dp"
             android:layout_marginBottom="175dp"
             android:maxLines="1"
             android:ems="10"
-            android:hint="Email"/>
-
-        <EditText
-            android:id="@+id/pass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="@drawable/caixa"
-            android:padding="20dp"
-            android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
-            android:maxLines="1"
-            android:hint="Senha"/>
+            android:hint="Digite o seu email"/>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/signIn"
+            android:id="@+id/restore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -78,18 +66,18 @@
             app:layout_constraintTop_toTopOf="parent"
             android:background="@drawable/botao"
             android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="120dp"
             android:padding="10dp"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textAllCaps="false"
-            android:text="Entrar"
-            android:onClick="logIn"
+            android:text="Enviar email de recuperação"
+            android:onClick="restorePass"
             />
 
         <ProgressBar
-            android:id="@+id/progressBar"
+            android:id="@+id/progressBar2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -97,20 +85,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:visibility="invisible"
-            />
-
-        <TextView
-            android:id="@+id/forgotPass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="Esqueci a senha"
-            android:textStyle="bold"
-            android:layout_marginTop="250dp"
-            android:onClick="goToRestore"
             />
 
 
