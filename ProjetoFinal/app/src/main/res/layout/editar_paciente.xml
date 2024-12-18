@@ -12,153 +12,116 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         >
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/quitbutton"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="660dp"
-            android:onClick="VoltarAoMenuPrincipal"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="_______________________________________________________________"
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/quitBttn"
+            android:src="@drawable/back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="570dp"
-            android:gravity="center"
+            android:onClick="backToMenu"
+            android:layout_marginBottom="800dp"
+            android:layout_marginEnd="300dp"
             />
+
+        
         <TextView
-            android:id="@+id/nomePaciente2"
+            android:id="@+id/titlePacient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="590dp"
             android:textColor="@color/dark_cyan"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:text="Paciente Placeholder"
+            android:text="placeholder"
             android:gravity="center"
+            android:layout_marginBottom="550dp"
             />
 
-        <ImageView
-            android:id="@+id/imagemPaciente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="7dp"
-            android:layout_marginTop="90dp"
-            android:background="@drawable/circle"
-            android:src="@drawable/profile2"
-            app:layout_constraintBottom_toBottomOf="@id/nomePaciente2"
-            android:clickable="true"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/idadePaciente2" />
-
-        <TextView
-            android:id="@+id/idadePaciente2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="130dp"
-            app:layout_constraintBottom_toBottomOf="@id/nomePaciente2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/condicaoFisica"
-            android:textSize="20sp"
-            android:text="Idade: placeholder"
-             />
-
         <EditText
-            android:id="@+id/condicaoFisica"
-            android:layout_width="320dp"
+            android:id="@+id/conditionPacient"
+            android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_marginHorizontal="7dp"
-            android:layout_marginBottom="240dp"
-            android:background="@drawable/caixa2"
+            android:background="@drawable/container2"
             android:ems="10"
             android:hint="Digite a condição física do paciente"
             android:maxLines="1"
-            android:padding="7dp"
-            android:scrollbars="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@id/imagemPaciente"
-            app:layout_constraintTop_toTopOf="parent"
-
-             />
-
-        <EditText
-            android:id="@+id/medicamentosPaciente"
-            android:layout_width="320dp"
-            android:layout_height="60dp"
-            android:layout_marginHorizontal="7dp"
-            android:layout_marginBottom="90dp"
-            android:background="@drawable/caixa2"
-            android:ems="10"
-            android:hint="Digite as medicações que o paciente faz uso."
-            android:maxLines="1"
-            android:padding="7dp"
-            android:scrollbars="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@id/imagemPaciente"
-            app:layout_constraintTop_toTopOf="parent"
-            />
-
-        <EditText
-            android:id="@+id/rotinaPaciente"
-            android:layout_width="320dp"
-            android:layout_height="80dp"
-            android:layout_marginHorizontal="7dp"
-            android:layout_marginTop="70dp"
-            android:background="@drawable/caixa2"
-            android:ems="10"
-            android:hint="Descreva a rotina do paciente."
-            android:maxLines="1"
-            android:padding="7dp"
-            android:scrollbars="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@id/imagemPaciente"
-            app:layout_constraintTop_toTopOf="parent"
-            />
-        <EditText
-            android:id="@+id/observacoes"
-            android:layout_width="320dp"
-            android:layout_height="100dp"
-            android:layout_marginHorizontal="7dp"
-            android:layout_marginTop="270dp"
-            android:background="@drawable/caixa2"
-            android:ems="10"
-            android:hint="Mensagens e observações"
-            android:maxLines="1"
-            android:padding="7dp"
-            android:scrollbars="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@id/imagemPaciente"
-            app:layout_constraintTop_toTopOf="parent"
-            />
-        <TextView
-            android:layout_width="170dp"
-            android:layout_height="50dp"
+            android:layout_marginHorizontal="25dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="500dp"
+            android:layout_marginBottom="200dp"/>
+
+        <EditText
+            android:id="@+id/medicationsPacient"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/container2"
+            android:ems="10"
+            android:hint="Digite as medicações que o paciente faz uso."
+            android:maxLines="1"
+            android:layout_marginHorizontal="25dp"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/routinePacient"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/container2"
+            android:ems="10"
+            android:hint="Descreva a rotina do paciente."
+            android:maxLines="1"
+            android:layout_marginHorizontal="25dp"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="200dp"/>
+
+        <EditText
+            android:id="@+id/obsPacient"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/container2"
+            android:ems="10"
+            android:hint="Mensagens e observações"
+            android:maxLines="1"
+            android:layout_marginHorizontal="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="400dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/updateBttn"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
             android:background="@drawable/botao"
             android:gravity="center"
+            android:onClick="updatePacientData"
             android:text="Atualizar dados"
+            android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="AtualizarDados"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="800dp"
+            android:layout_marginBottom="40dp"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

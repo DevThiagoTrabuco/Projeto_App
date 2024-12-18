@@ -12,37 +12,34 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Botão Quit no canto superior direito -->
-        <ImageView
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/exit"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/quitbutton"
-            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="backToMenu"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:onClick="VoltarAoMenuPrincipal"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-        <!-- TextView Cadastro de Paciente no topo com padding de 20dp -->
         <TextView
-            android:id="@+id/cadastroPaciente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="40dp"
             android:textColor="@color/dark_cyan"
             android:textStyle="bold"
             android:textSize="20sp"
             android:text="Cadastro de paciente"
-            android:gravity="center"/>
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-        <!-- TextView Dados do Paciente com padding de 16dp -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/cadastroPaciente"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="16dp"
             android:paddingTop="30dp"
             android:textColor="@color/dark_cyan"
@@ -50,146 +47,132 @@
             android:textSize="20sp"
             android:text="Dados do paciente"
             android:gravity="center"
-            android:id="@+id/dadosPaciente"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-        <!-- EditText Nome Paciente com 30dp de espaço acima -->
         <EditText
-            android:id="@+id/nomePaciente"
+            android:id="@+id/namePacient"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/dadosPaciente"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:background="@drawable/caixa2"
             android:padding="10dp"
             android:maxLines="1"
             android:ems="10"
             android:hint="Digite o nome do paciente"
-            android:layout_marginTop="30dp" />
+            android:layout_marginTop="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-        <!-- EditText CPF Paciente com 10dp de separação -->
         <EditText
-            android:id="@+id/cpfPaciente"
+            android:id="@+id/cpfPacient"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/nomePaciente"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:background="@drawable/caixa2"
             android:padding="7dp"
             android:hint="Digite o cpf do paciente"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- EditText Data de Nascimento Paciente com 10dp de separação -->
         <EditText
-            android:id="@+id/dtNascimentoPaciente"
+            android:id="@+id/bdayPacient"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/cpfPaciente"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:background="@drawable/caixa2"
             android:padding="7dp"
+            android:inputType="date"
             android:hint="Digite a data de nascimento do paciente"
-            android:layout_marginTop="10dp" />
-
-        <!-- Linha de separação -->
-        <TextView
-            android:id="@+id/linhaSeparacao"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="__________________________________________________"
-            app:layout_constraintTop_toBottomOf="@id/dtNascimentoPaciente"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:gravity="center"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-        <!-- TextView Dados do Responsável -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/linhaSeparacao"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:textColor="@color/dark_cyan"
             android:textStyle="bold"
             android:textSize="20sp"
             android:paddingTop="30dp"
             android:text="Dados do responsável"
             android:gravity="center"
-            android:id="@+id/dadosResponsavel"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-        <!-- EditText Nome Responsável com 30dp de espaço acima -->
         <EditText
-            android:id="@+id/nomeResponsavel"
+            android:id="@+id/nameRelative"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/dadosResponsavel"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:background="@drawable/caixa2"
             android:padding="7dp"
             android:maxLines="1"
             android:ems="10"
             android:hint="Digite o nome do responsável"
-            android:layout_marginTop="30dp" />
+            android:layout_marginTop="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- EditText CPF Responsável com 10dp de separação -->
         <EditText
-            android:id="@+id/cpfResponsavel"
+            android:id="@+id/cpfRelative"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/nomeResponsavel"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:background="@drawable/caixa2"
             android:padding="7dp"
             android:hint="Digite o cpf do responsável"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-        <!-- EditText Data de Nascimento Responsável com 10dp de separação -->
         <EditText
-            android:id="@+id/dtNascimentoResponsavel"
+            android:id="@+id/phoneRelative"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/cpfResponsavel"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:background="@drawable/caixa2"
             android:padding="7dp"
             android:hint="Digite a data de nascimento do responsável"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- EditText E-mail Responsável com 10dp de separação -->
         <EditText
-            android:id="@+id/emailResponsavel"
+            android:id="@+id/emailRelative"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/dtNascimentoResponsavel"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:background="@drawable/caixa2"
             android:padding="7dp"
             android:maxLines="1"
             android:ems="10"
             android:hint="Digite o e-mail para contato"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-        <!-- Botão Cadastrar com 30dp de separação -->
-        <TextView
-            android:id="@+id/btnCadastrar"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/registerBttn"
             android:layout_width="170dp"
             android:layout_height="50dp"
-            app:layout_constraintTop_toBottomOf="@id/emailResponsavel"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="30dp"
             android:background="@drawable/botao"
             android:gravity="center"
+            android:textAllCaps="false"
             android:text="Cadastrar"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:onClick="CadastrarPaciente"/>
+            android:onClick="registerPacient"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

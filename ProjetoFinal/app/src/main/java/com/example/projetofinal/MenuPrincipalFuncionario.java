@@ -1,15 +1,21 @@
 package com.example.projetofinal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MenuPrincipalFuncionario extends AppCompatActivity {
+
+    private AppCompatButton registro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,32 +27,17 @@ public class MenuPrincipalFuncionario extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+       registro = findViewById(R.id.registerBttn0);
     }
 
-    public void telaEditar(View view) {
+    public void cadastrarPaciente(View v) {
+        Intent i = new Intent(getApplicationContext(), Cadastro.class);
+        startActivity(i);
     }
-
-    public void telaCadastro(View view) {
-    }
-
-    public void sair(View view) {
-    }
-
-    public void pesquisar(View view) {
-    }
-
-    public void telaEstoque(View view) {
-    }
-
-    public void telaCuidadores(View view) {
-    }
-
-    public void telaDebitos(View view) {
-    }
-
-    public void telaContrato(View view) {
-    }
-
-    public void telaFinanceiro(View view) {
+    public void sair(View v) {
+        FirebaseAuth.getInstance().signOut();
+        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(i);
+        finish();
     }
 }
