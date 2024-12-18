@@ -113,4 +113,9 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), MenuPrincipalFuncionario.class);
         startActivity(i);
     }
+
+    public void goToRestore(){
+        Intent i = new Intent(getApplicationContext(), EsqueciSenha.class);
+        startActivity(i);
+    }
 }
